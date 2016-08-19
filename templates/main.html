@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-12 text-right">
       <a href="#/checkout">
-        <button type="button" class="btn checkout-button" name="button">Checkout | Bag: {{vw.cookiez}}</button></a>
+        <button type="button" ng-click="checkout()" class="btn checkout-button" name="button">Checkout | Bag: {{vw.cartQuantity}}</button></a>
     </div>
   </div>
 </div>
@@ -41,7 +41,7 @@
       <div>
         <tbody class="table">
         <tr ng-repeat = "product in products | filter:searchText | orderBy:taco">
-          <td class="cell-size-left"><img src="{{product.imageUrl}}" alt="" /></td>
+          <td class="cell-size-left"><img src="{{product.imageUrl}}" alt=""/></td>
           <td class="cell-size-right">
             <div class="row">
                 <div class="col-md-4">
@@ -50,6 +50,7 @@
                 <div class="col-md-8">
                     <h5 class="text-right">Quantity:
                     <select ng-model="amount">
+                      <option value="0">0</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -78,9 +79,7 @@
                 <li>{{cat}}</li>
             </ul></h5>
           </div>
-
           </td>
-
         </tr><!--END OF NG-REPEAT-->
       </tbody>
     </table>

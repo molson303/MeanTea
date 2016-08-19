@@ -1,10 +1,20 @@
-app.controller('MainController', function ($scope, teaService) {
-$scope.vw = {}
- $scope.quantity = function(product, quantity){
-   teaService.add(product, quantity)
-   $scope.vw.cartQuantity= teaService.inventory.length;
- }
-$scope.amount = 1;
+app.controller('checkout_controller', function ($scope, teaService) {
+console.log("******TEA*****");
+console.log(teaService);
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $scope.products = [
   {
@@ -132,4 +142,6 @@ $scope.products = [
 
 
 
-})
+
+
+ });

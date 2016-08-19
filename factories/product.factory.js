@@ -1,10 +1,9 @@
 app.factory('teaService', function () {
   return {
     inventory: [],
-    add: function (tea, quantity) {
-      tea.quantity = quantity
-      this.inventory.push(tea);
-
-    }
+    add: function (product, quantity) {
+      product.quantity = quantity
+      this.inventory.push(product);
+      }
   }
 })
