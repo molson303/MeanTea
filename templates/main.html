@@ -28,9 +28,9 @@
                 <h5>Sort by price:</h5>
               </div>
               <div class="col-md-2">
-                <select>
-                  <option>Lowest</option>
-                  <option>Highest</option>
+                <select ng-model="taco">
+                  <option value="price">Low</option>
+                  <option value="-price">High</option>
                 </select>
               </div>
             </th>
@@ -39,7 +39,7 @@
         </thead>
       <div>
         <tbody>
-        <tr ng-repeat = "product in products | filter:searchText">
+        <tr ng-repeat = "product in products | filter:searchText | orderBy:taco">
           <td class="cell-size-left"><img src="{{product.imageUrl}}" alt="" /></td>
           <td class="cell-size-right">
             <div class="row">
@@ -60,13 +60,14 @@
                       <option value="9">9</option>
                       <option value="10">10</option>
                     </select>
-                    <button type="submit" name="button">Add to Bag</button>
+                    <button class="btn button-color" type="submit" name="button">Add to Bag</button>
                   </h5>
                 </div>
               </div>
             </div>
             <div class="product-margin">
-            <h5>Price: {{product.price/100 | currency}}</h5>
+              <span>
+            <h5 ng-model="taco">{{product.price/100 | currency}}</h5></span>
             <h5>Caffeine Scale: {{product.caffeineScale}}</h5>
             <h5>Ingredients: {{product.ingredients}}</h5>
             <h5>Rating: {{product.rating}}</h5>
@@ -78,13 +79,13 @@
 
           </td>
 
-        </tr>
+        </tr><!--END OF NG-REPEAT-->
       </tbody>
     </table>
   </div>
 </div>
 </div>
-</div> <!--END OF NG-REPEAT-->
+</div>
 
 
 

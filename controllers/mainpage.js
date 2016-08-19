@@ -1,5 +1,8 @@
 app.controller('MainController', function ($scope) {
 
+
+
+
 $scope.products = [
   {
       "_id": "55c8ee82152165d244b98300",
