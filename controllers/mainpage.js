@@ -1,6 +1,11 @@
-app.controller('MainController', function ($scope) {
+app.controller('MainController', function ($scope, teaService) {
+$scope.vw = {}
+ $scope.quantity = function(tea, quantity){
+   teaService.add(tea, quantity)
+   $scope.vw.cookiez= teaService.inventory.length;
+   console.log($scope.vw.cookiez);
 
-
+ }
 
 
 $scope.products = [
