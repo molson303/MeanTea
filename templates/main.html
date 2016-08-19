@@ -39,7 +39,7 @@
         </thead>
       <div>
         <tbody>
-        <tr ng-repeat = "product in products">
+        <tr ng-repeat = "product in products | filter:searchText">
           <td class="cell-size-left"><img src="{{product.imageUrl}}" alt="" /></td>
           <td class="cell-size-right">
             <div class="row">
