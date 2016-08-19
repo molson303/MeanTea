@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 text-left">
+        <h2 class="header-title">Mean Tea Shopping Bag</h2>
+      </div>
+    <div class="col-md-4 text-right">
+        <h2>Order Total = 56.72</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <div class="col-md-4">
+              <th class="col-background checkout-col-width-product">
+                <h4>Product</h4>
+              </th>
+            </div>
+            <div>
+            <th class="col-background checkout-col-width">
+              <div class="col-md-4">
+                <h5>Quantity</h5>
+              </div>
+            </th>
+            <th class="col-background checkout-col-width">
+              <div class="col-md-4">
+                <h5>Sub-Total</h5>
+              </div>
+             </th>
+             <th class="col-background checkout-col-width">
+
+              </th>
+            </div>
+          </tr>
+        </thead>
+      <div>
+        <tbody class="table">
+        <tr>
+          <td><img src="{{product.imageUrl}}" alt="" />
+            <div class="product-margin">
+              <span>
+            <h5 ng-model="taco">{{product.price/100 | currency}}</h5></span>
+            <h5>Caffeine Scale: {{product.caffeineScale}}</h5>
+            <h5>Ingredients: {{product.ingredients}}</h5>
+            <h5>Rating: {{product.rating}}</h5>
+            <h5>In Stock: {{product.inStock}}</h5>
+            <h5>Categories: <ul ng-repeat = "cat in product.categories">
+                <li>{{cat}}</li>
+            </ul></h5>
+          </div>
+        </td>
+        <td class="cell-size-right">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>5</h4>
+            </div>
+          </div>
+          <td class="cell-size-right">
+            <div class="row">
+              <div class="col-md-4">
+                <h4>66.75</h4>
+              </div>
+            </div>
+          <td class="cell-size-right">
+            <div class="row">
+              <div class="col-md-4">
+                <button type="button" class="btn btn-warning" name="button">Edit</button>
+              </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" name="button">Remove</button>
+              </div>
+
+            </div>
+            </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>

@@ -1,14 +1,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1>Welcome To Mean Tea</h1>
+        <h1 class="header-title text-left">Welcome To Mean Tea</h1>
       </div>
     </div>
   </div>
 <div class="container">
   <div class="row">
     <div class="col-md-12 text-right">
-        Checkout: Bag: {{quantity}}
+      <a href="#/checkout">
+        <button type="button" class="btn checkout-button" name="button">Checkout | Bag: {{quantity}}</button></a>
     </div>
   </div>
 </div>
@@ -18,11 +19,11 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th><h4>Tea</h4></th>
+            <th class="col-background"><h4>Tea</h4></th>
             <div>
-            <th class="row">
+            <th class="row col-background">
               <div class="col-md-6">
-                <h5>Information</h5>
+                <h5 >Information</h5>
               </div>
               <div class="col-md-4 text-right">
                 <h5>Sort by price:</h5>
@@ -38,7 +39,7 @@
           </tr>
         </thead>
       <div>
-        <tbody>
+        <tbody class="table">
         <tr ng-repeat = "product in products | filter:searchText | orderBy:taco">
           <td class="cell-size-left"><img src="{{product.imageUrl}}" alt="" /></td>
           <td class="cell-size-right">

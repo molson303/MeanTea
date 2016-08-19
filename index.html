@@ -5,7 +5,6 @@
     <title>Mean Tea</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
   </head>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -28,6 +27,7 @@
           <li class="dropdown">
             <a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category<span class="caret"></span></a>
             <ul ng-model="searchText" class="dropdown-menu">
+              <li ng-click="searchText='' "><a href="#/">None</li>
               <li ng-click="searchText='dark'"><a href="#/">dark</li>
               <li ng-click="searchText='cold'"><a href="#/">cold</a></li>
               <li ng-click="searchText='awesome'"><a href="#/">awesome</a></li>
@@ -51,7 +51,7 @@
     </div><!-- /.container-fluid -->
   </nav>
 <body>
-  <div ng-view></div>
+  <div class="background-color margin-main-page" ng-view></div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
