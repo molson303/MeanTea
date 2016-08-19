@@ -27,17 +27,17 @@
 
           <li class="dropdown">
             <a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">dark</a></li>
-              <li><a href="#">cold</a></li>
-              <li><a href="#">awesome</a></li>
-              <li><a href="#">dry</a></li>
-              <li><a href="#">hot</a></li>
-              <li><a href="#">summer</a></li>
-              <li><a href="#">lucid</a></li>
-              <li><a href="#">warm</a></li>
-              <li><a href="#">winter</a></li>
-              <li><a href="#">spring</a></li>
+            <ul ng-model="searchText" class="dropdown-menu">
+              <li ng-click="searchText='dark'"><a href="#/">dark</li>
+              <li ng-click="searchText='cold'"><a href="#/">cold</a></li>
+              <li ng-click="searchText='awesome'"><a href="#/">awesome</a></li>
+              <li ng-click="searchText='dry'"><a href="#/">dry</a></li>
+              <li ng-click="searchText='hot'"><a href="#/">hot</a></li>
+              <li ng-click="searchText='summer'"><a href="#/">summer</a></li>
+              <li ng-click="searchText='lucid'"><a href="#/">lucid</a></li>
+              <li ng-click="searchText='warm'"><a href="#/">warm</a></li>
+              <li ng-click="searchText='winter'"><a href="#/">winter</a></li>
+              <li ng-click="searchText='spring'"><a href="#/">spring</a></li>
             </ul>
           </li>
         </ul>
