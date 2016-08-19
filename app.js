@@ -10,4 +10,4 @@ app.config (function($routeProvider) {
       controller: ''
     })
     .otherwise('/');
-})
+}) 
