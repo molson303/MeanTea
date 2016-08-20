@@ -32,21 +32,20 @@
               </div>
              </th>
              <th class="col-background checkout-col-width">
-
-              </th>
+             </th>
             </div>
           </tr>
         </thead>
-      <div>
+      <div ng-repeat = "product in inventory">
         <tbody class="table">
         <tr>
-          <td>{{vw.teaName}}
+          <td>{{product.name}}
             <div class="product-margin">
-              <h3><img src="{{vw.teaImage}}" alt="" /></h3>
-              <h5>Price: {{vw.teaPrice}}</h5>
-              <h5>Caffeine Scale: {{vw.teaCaffeine}} </h5>
-              <h5>Ingredients: {{vw.teaingredients}} </h5>
-              <h5>Rating: {{vw.teaRating}} </h5>
+              <h3><img src="{{product.imageUrl}}" alt="" /></h3>
+              <h5>Price: {{tea.price}}</h5>
+              <h5>Caffeine Scale: {{tea.caffeine}} </h5>
+              <h5>Ingredients: {{tea.ingredients}} </h5>
+              <h5>Rating: {{tea.rating}} </h5>
             </div>
         </td>
         <td class="cell-size-right">
@@ -71,8 +70,8 @@
               </div>
 
             </div>
-            </div>
-
+          </div>
+              <!-- THE END OF NG REPEAT -->
       </td>
     </tr>
   </tbody>
