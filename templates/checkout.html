@@ -6,21 +6,19 @@
     <div class="col-md-4 text-right">
         <h2>Order Total = 56.72</h2>
     </div>
+    </div>
   </div>
-</div>
-
+<!-- CLEAN -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <table class="table table-bordered">
-        <thead>
           <tr>
             <div class="col-md-4">
               <th class="col-background checkout-col-width-product">
                 <h4>Product</h4>
               </th>
             </div>
-            <div>
             <th class="col-background checkout-col-width">
               <div class="col-md-4">
                 <h5>Quantity</h5>
@@ -31,35 +29,40 @@
                 <h5>Sub-Total</h5>
               </div>
              </th>
-             <th class="col-background checkout-col-width">
-             </th>
-            </div>
-          </tr>
-        </thead>
-      <div ng-repeat = "product in inventory">
-        <tbody class="table">
-        <tr>
-          <td>{{product.name}}
-            <div class="product-margin">
+             <th class="col-background checkout-col-width"></th>
+           </tr>
+
+        <div ng-repeat = "product in inventory">
+          <tbody>
+          <td>
+            <h2>{{product.name}}</h2>
+          </td>
+          <div class="product-margin">
+              <h5>Price: {{product.price}}</h5>
               <h3><img src="{{product.imageUrl}}" alt="" /></h3>
-              <h5>Price: {{tea.price}}</h5>
-              <h5>Caffeine Scale: {{tea.caffeine}} </h5>
-              <h5>Ingredients: {{tea.ingredients}} </h5>
-              <h5>Rating: {{tea.rating}} </h5>
+              <h5>Caffeine Scale: {{product.caffeine}} </h5>
+              <h5>Ingredients: {{product.ingredients}} </h5>
+              <h5>Rating: {{product.rating}} </h5>
             </div>
-        </td>
-        <td class="cell-size-right">
+          </div>
+          </tbody>    <!--end of NGREPEAT -->
+
+        <!-- <td class="cell-size-right">
           <div class="row">
             <div class="col-md-4">
               <h4>5</h4>
             </div>
           </div>
+        </td>
+
           <td class="cell-size-right">
             <div class="row">
               <div class="col-md-4">
                 <h4>66.75</h4>
               </div>
             </div>
+          </td>
+
           <td class="cell-size-right">
             <div class="row">
               <div class="col-md-4">
@@ -70,13 +73,9 @@
               </div>
 
             </div>
-          </div>
-              <!-- THE END OF NG REPEAT -->
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
+
+          </td> -->
+            </table>
+          </div> <!--col md 12 end -->
+        </div> <!--row-->
+      </div> <!--container-->

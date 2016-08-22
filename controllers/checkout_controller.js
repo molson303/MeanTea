@@ -4,7 +4,7 @@ $scope.vw = {}
 // $scope.vw.teaImage = teaService.inventory[0].imageUrl;
 $scope.inventory = teaService.inventory;
 console.log("*********");
-console.log($scope.inventory.name);
+console.log($scope.inventory);
 
 
 
