@@ -1,81 +1,67 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 text-left">
-        <h2 class="header-title">Mean Tea Shopping Bag</h2>
-      </div>
-    <div class="col-md-4 text-right">
-        <h2>Order Total = 56.72</h2>
-    </div>
+    <div class="col-md-12 text-center">
+      <h1 class="header-title text-left">Welcome To Mean Tea</h1>
     </div>
   </div>
-<!-- CLEAN -->
+</div>
+
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <table class="table table-bordered">
-          <tr>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="col-background"><h4>Product</h4></th>
+
+          <div>
+          <th class="row col-background">
             <div class="col-md-4">
-              <th class="col-background checkout-col-width-product">
-                <h4>Product</h4>
-              </th>
+              <h5>Quantity</h5>
             </div>
-            <th class="col-background checkout-col-width">
-              <div class="col-md-4">
-                <h5>Quantity</h5>
-              </div>
-            </th>
-            <th class="col-background checkout-col-width">
-              <div class="col-md-4">
-                <h5>Sub-Total</h5>
-              </div>
-             </th>
-             <th class="col-background checkout-col-width"></th>
-           </tr>
-
-        <div ng-repeat = "product in inventory">
-          <tbody>
-          <td>
-            <h2>{{product.name}}</h2>
-          </td>
-          <div class="product-margin">
-              <h5>Price: {{product.price}}</h5>
-              <h3><img src="{{product.imageUrl}}" alt="" /></h3>
-              <h5>Caffeine Scale: {{product.caffeine}} </h5>
-              <h5>Ingredients: {{product.ingredients}} </h5>
-              <h5>Rating: {{product.rating}} </h5>
+          </th>
+          <th class="row col-background">
+            <div class="col-md-4">
+              <h5>Sub-Total</h5>
             </div>
-          </div>
-          </tbody>    <!--end of NGREPEAT -->
+          </th>
+          <th class="row col-background">
+            <div class="col-md-3">
+              <h5>blank</h5>
+            </div>
+          </th>
+        </div>
+        </tr>
+      </thead>
 
-        <!-- <td class="cell-size-right">
+      <tbody class="table">
+      <tr ng-repeat = "product in inventory">
+        <td class="cell-size-left">
           <div class="row">
-            <div class="col-md-4">
-              <h4>5</h4>
+              <div class="col-md-4">
+                <h2>{{product.name}}</h2>
+              </div>
             </div>
+          <img src="{{product.imageUrl}}" alt=""/>
+          <h5>Caffeine Scale: {{product.caffeineScale}}</h5>
+          <h5>Ingredients: {{product.ingredients}}</h5>
+          <h5>Rating: {{product.rating}}</h5>
+        </td>
+        <td class="cell-size-right">
+          <div class="product-margin text-center">
+            <h5>5</h5>
           </div>
         </td>
-
-          <td class="cell-size-right">
-            <div class="row">
-              <div class="col-md-4">
-                <h4>66.75</h4>
-              </div>
-            </div>
-          </td>
-
-          <td class="cell-size-right">
-            <div class="row">
-              <div class="col-md-4">
-                <button type="button" class="btn btn-warning" name="button">Edit</button>
-              </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-danger" name="button">Remove</button>
-              </div>
-
-            </div>
-
-          </td> -->
-            </table>
-          </div> <!--col md 12 end -->
-        </div> <!--row-->
-      </div> <!--container-->
+        <td class="cell-size-right">
+          THIS WILL BE THE QUANTITY X PRICE
+        </td>
+        <td>
+          <button type="submit" class="btn btn-warning" name="button">Edit</button>
+          <button type="submit" class="btn btn-danger" name="button">Remove</button>
+        </td>
+      </tr><!--END OF NG-REPEAT-->
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
