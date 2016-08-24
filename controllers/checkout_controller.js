@@ -1,10 +1,6 @@
-app.controller('checkout_controller', function ($scope, teaService) {
-$scope.vw = {}
-
+app.controller('CheckoutController', function ($scope, teaService) {
 $scope.inventory = teaService.inventory;
-console.log("*********");
-console.log($scope.inventory);
-
+$scope.orderTotal = teaService.getOrderTotal();
 
 
  });

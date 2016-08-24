@@ -7,7 +7,7 @@ app.config (function($routeProvider) {
     })
     .when('/checkout', {
       templateUrl: 'templates/checkout.html',
-      controller: 'checkout_controller'
+      controller: 'CheckoutController'
     })
     .otherwise('/');
 })
