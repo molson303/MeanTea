@@ -77,9 +77,15 @@
           </div>
         </td>
         <td>
-          <button type="submit" class="btn btn-warning" ng-show="!edit" ng-click="edit = !edit" name="edit">Edit</button>
-          <button type="submit" class="btn btn-warning" ng-show="edit" ng-click="quantity(product, amount)" name="button">Submit</button>
-          <button type="submit" class="btn btn-danger" ng-click="deleteItem(product)" name="remove">Remove</button>
+            <div class="col-md-4">
+            <div ng-click="edit = !edit">
+              <button type="submit" class="btn btn-warning" ng-show="!edit"  name="edit">Edit</button>
+              <button type="submit" class="btn btn-warning" ng-show="edit"  ng-click="quantity(product, amount)" name="button">Submit</button>
+          </div>
+            </div>
+          <div class="col-md-4 text-left">
+            <button type="submit" class="btn btn-danger" ng-click="deleteItem(item)" name="remove">Remove</button>
+          </div>
         </td>
       </tr><!--END OF NG-REPEAT-->
     </tbody>

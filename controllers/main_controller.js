@@ -3,6 +3,7 @@ $scope.vw = {}
  $scope.quantity = function(product, quantity){
    teaService.add(product, quantity)
    $scope.vw.cartQuantity= teaService.inventory.length;
+
  }
 $scope.amount = 1;
 

@@ -2,8 +2,16 @@ app.factory('teaService', function () {
   return {
     inventory: [],
     add: function (product, quantity) {
-      product.quantity = quantity
-      this.inventory.push(product);
+      if (product.quantity >= 1) {
+        product.quantity = quantity
+      }else{
+        product.quantity = quantity
+        this.inventory.push(product);
+      }
+      // first check if tea is in car already
+      // if it is, just update quantity
+      // else push tea in cart
+
     },
     getOrderTotal: function (){
       total = []
@@ -18,8 +26,9 @@ app.factory('teaService', function () {
       })
       return orderTotal
     },
-
-
-
   }
 })
+
+// TO DO
+// remove updates total but does not remove items
+// submit updates subtotal but not total
