@@ -2,10 +2,11 @@ app.controller('CheckoutController', function ($scope, teaService) {
 $scope.inventory = teaService.inventory;
 $scope.orderTotal = teaService.getOrderTotal();
 
-
 $scope.deleteItem = function(item) {
-  var index = $scope.inventory.indexOf(item);
+   var index = $scope.inventory.indexOf(item);
   $scope.inventory.splice(index, 1);
+  $scope.orderTotal = teaService.getOrderTotal();
+
 }
 
 
