@@ -17,7 +17,10 @@ app.factory('teaService', function () {
         return a+=b;
       })
       return orderTotal
-    }
-  }
+    },
 
+
+
+
+  }
 })
