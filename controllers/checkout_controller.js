@@ -7,6 +7,10 @@ $scope.deleteItem = function(item) {
   $scope.inventory.splice(index, 1);
   $scope.orderTotal = teaService.getOrderTotal();
 }
+$scope.quantity = function(product, quantity){
+  teaService.add(product, quantity)
+  $scope.vw.cartQuantity= teaService.inventory.length;
+}
 
 
 

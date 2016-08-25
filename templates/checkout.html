@@ -56,11 +56,20 @@
           <div class="product-margin text-center">
             <h5 ng-show="!edit">{{product.quantity}}</h5>
           </div>
-          <select ng-show="edit" class="product-margin text-right">
+          <div class="text-center">
+          <select ng-show="edit" ng-model="amount">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
+        </div>
         </td>
         <td class="cell-size-right">
           <div class="product-margin text-center">
@@ -69,7 +78,7 @@
         </td>
         <td>
           <button type="submit" class="btn btn-warning" ng-show="!edit" ng-click="edit = !edit" name="edit">Edit</button>
-          <button type="submit" class="btn btn-warning" ng-show="edit" name="button">Submit</button>
+          <button type="submit" class="btn btn-warning" ng-show="edit" ng-click="quantity(product, amount)" name="button">Submit</button>
           <button type="submit" class="btn btn-danger" ng-click="deleteItem(product)" name="remove">Remove</button>
         </td>
       </tr><!--END OF NG-REPEAT-->
