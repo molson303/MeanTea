@@ -6,8 +6,10 @@ $scope.deleteItem = function(item) {
    var index = $scope.inventory.indexOf(item);
   $scope.inventory.splice(index, 1);
   $scope.orderTotal = teaService.getOrderTotal();
-
 }
+
+
+
 
 
 // var total = $scope.inventory.map(function (item) {

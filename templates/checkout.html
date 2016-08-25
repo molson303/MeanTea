@@ -39,7 +39,6 @@
         </div>
         </tr>
       </thead>
-
       <tbody class="table">
       <tr ng-repeat = "product in inventory">
         <td class="cell-size-left">
@@ -55,8 +54,13 @@
         </td>
         <td class="cell-size-right">
           <div class="product-margin text-center">
-            <h5>{{product.quantity}}</h5>
+            <h5 ng-show="!edit">{{product.quantity}}</h5>
           </div>
+          <select ng-show="edit" class="product-margin text-right">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </td>
         <td class="cell-size-right">
           <div class="product-margin text-center">
@@ -64,7 +68,8 @@
           </div>
         </td>
         <td>
-          <button type="submit" class="btn btn-warning" name="edit">Edit</button>
+          <button type="submit" class="btn btn-warning" ng-show="!edit" ng-click="edit = !edit" name="edit">Edit</button>
+          <button type="submit" class="btn btn-warning" ng-show="edit" name="button">Submit</button>
           <button type="submit" class="btn btn-danger" ng-click="deleteItem(product)" name="remove">Remove</button>
         </td>
       </tr><!--END OF NG-REPEAT-->
