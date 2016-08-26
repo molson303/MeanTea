@@ -3,15 +3,16 @@ $scope.inventory = teaService.inventory;
 $scope.orderTotal = teaService.getOrderTotal();
 
 $scope.deleteItem = function(item) {
-  var index = $scope.inventory.indexOf(item);
-  $scope.inventory.splice(index, 1)
+  for (var i = 0; i < $scope.inventory.length; i++) {
+    if ($scope.inventory[i]._id === item._id) {
+      $scope.inventory.splice(i , 1)
+    }
+  }
   $scope.orderTotal = teaService.getOrderTotal();
-
 }
 $scope.quantity = function(product, quantity){
   teaService.add(product, quantity)
   $scope.orderTotal = teaService.getOrderTotal();
-
 }
 
 
